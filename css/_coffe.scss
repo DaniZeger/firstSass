@@ -1,0 +1,21 @@
+
+
+h1 {
+    background-color: $dark-brown;
+    color: $light-brown;
+    animation: h1-move 2s linear 0.5s;
+    position: relative;
+}
+
+@keyframes h1-move {
+    0% {
+        opacity: 0;
+        top: -150px
+    }
+    100% {
+        opacity: 1;
+        top: 0px
+    }
+
+
+}

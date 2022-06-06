@@ -1,0 +1,8 @@
+$spec-text : 'Josefin Sans', sans-serif;
+$reg-text : 'Roboto', sans-serif;
+
+@mixin titleText {
+    text-align: center;
+    color: $light-brown;
+    font-family: $spec-text;
+}

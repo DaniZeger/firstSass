@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 10px 0px;
+    background-color: $light-brown;
+    .li-wrap {
+        width: 35vw;
+        display: flex;
+        justify-content: space-around;
+
+        .a-wrap {
+            list-style: none;
+            .nav-link {
+                text-decoration: none;
+                color: $dark-brown;
+                font-family: $spec-text;
+                font-weight: bold;
+            }
+        }
+    }
+}

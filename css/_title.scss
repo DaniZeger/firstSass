@@ -1,0 +1,74 @@
+@mixin box {
+    box-shadow: 5px 5px 3px rgba($color: #000000, $alpha: 0.5);
+    position: relative;
+    bottom: 75px;
+    background-color: $dark-brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;  
+}
+
+@mixin btn {
+    width: 80%;
+    height: 25px;
+    background-color: $light-brown;
+    color: $dark-brown;
+    border-radius: 5px;
+    border: 1px solid $dark-brown;   
+    align-self: center;
+    font-weight: bold;
+}
+
+div.title-wrap {
+    background-image: linear-gradient(to top rgba(244, 172, 114, 0.6) , rgba(191, 100, 48, 0.6)) , url(/img/mainPics/coffee-beans-1291656_1280.jpg);
+    height: 58vh;
+    background-size: cover;
+    background-position: center;
+    padding-top: 150px;
+
+    h1 {
+        @include titleText();
+        font-size: 72px;
+        width: 100%;
+        background-color: rgba($color: $dark-brown, $alpha: 0.5);
+        padding: 15px;
+    }
+}
+
+div.box-wrap {
+    display: flex;
+    justify-content: space-around;
+    width: 75vw;
+    height: 350px;
+    margin: auto;
+
+    div.box {
+        @include box();
+        transition-duration: 0.5s;
+        padding: 15px;
+
+        .box-title {
+            @include titleText();
+            color: $light-brown;
+        }
+
+        .box-img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .box-button {
+            @include btn();
+
+            &:hover {
+                box-shadow: 2px 2px 3px black;
+            }
+        }
+
+        &:hover {
+            border-radius: 25px;
+            transform: scale(1.1);
+        }
+    }
+}
